@@ -3,7 +3,6 @@ import pyodbc
 import json
 from flask import request
 app = Flask(__name__)
-app.config.from_object(app_config)
 @app.route('/')
 def getagent_number():
     server = 'manojtest.database.windows.net'
