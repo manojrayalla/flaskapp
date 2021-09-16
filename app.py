@@ -1,8 +1,16 @@
 from flask import Flask
 import pyodbc
 import json
-from flask import request
+import uuid
+import requests
+from flask import Flask, render_template, session, request, redirect, url_for
+from flask_session import Session  # https://pythonhosted.org/Flask-Session
+import msal
+import app_config
+
 app = Flask(__name__)
+app.config.from_object(app_config)
+Session(app)
 @app.route('/')
 def getagent_number():
     server = 'manojtest.database.windows.net'
