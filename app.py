@@ -13,10 +13,10 @@ app.config.from_object(app_config)
 Session(app)
 @app.route('/')
 def getallagents():
-    server = 'manojtest.database.windows.net'
-    database = 'manojtest'
-    username = 'manojtest'
-    password = 'Manoj@143Archu'   
+    server = 'manojtestdb.database.windows.net'
+    database = 'Test123'
+    username = 'admin1'
+    password = 'Test123'   
     driver= '{ODBC Driver 17 for SQL Server}'
     conn = pyodbc.connect('DRIVER='+driver+';SERVER=tcp:'+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
     cursor = conn.cursor()
@@ -33,10 +33,10 @@ def getallagents():
     return finaldict
 @app.route('/selectagent')
 def getagent_number():
-    server = 'manojtest.database.windows.net'
-    database = 'manojtest'
-    username = 'manojtest'
-    password = 'Manoj@143Archu'   
+    server = 'manojtestdb.database.windows.net'
+    database = 'Test123'
+    username = 'admin1'
+    password = 'Test123'    
     driver= '{ODBC Driver 17 for SQL Server}'
     agentnumber = request.args.get('agentnumber')
     conn = pyodbc.connect('DRIVER='+driver+';SERVER=tcp:'+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
